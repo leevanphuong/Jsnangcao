@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    const restaurant={
+        name: 'Scoffe',
+        location: '25 Ngo Xuan Quang',
+        categories: ['Coffe','Milktea', 'water'],
+        startermenu:['Snack', 'candy'],
+        mainmenu:['Coffe','Milktea','Atiso'],
+        oder: function(StarterIndex, mainIndex){
+            return[this.startermenu[StarterIndex], this.mainmenu[mainIndex]];
+        }
+    }
+
+    // lay phan tu cua mang
+    const [first, , second] = restaurant.categories;
+    console.log(first, second);
+
+    //Nhan 2 gia tri tra ve tu 1 ham
+    const [New, old]= restaurant.oder(1,0);
+    console.log(New, old)
+
+    const nested =[2,4, [5,6]];
+    const [i, , [j, k]]=nested;
+    console.log(i, j , k)
+</script>
+<body>
+    
+</body>
+</html>

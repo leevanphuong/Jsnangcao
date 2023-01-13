@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+       const restaurant={
+        name: 'Scoffe',
+        location: '25 Ngo Xuan Quang',
+        categories: ['Coffe','Milktea', 'water'],
+        startermenu:['Snack', 'candy'],
+        mainmenu:['Coffe','Milktea','Atiso'],
+        oder: function(StarterIndex, mainIndex){
+            return[this.startermenu[StarterIndex], this.mainmenu[mainIndex]];
+        },
+        oderCoffe: function(ing1, ing2, ing3){
+            console.log(`Oder coffe ${ing1}, ${ing2}, and ${ing3}`);
+        }
+    }
+    //them phan tu vao mang bang toan tu spred
+    const srt = [1,2,3,4];
+    const newSrt= [5,6,7, ...srt];
+    console.log(newSrt);
+    //
+    const ingNew=[prompt('Thanh phan gom 1: '), prompt('Thanh phan gom 2: '),prompt('Thanh phan gom 3: ')];
+    console.log(ingNew);
+    restaurant.oderCoffe(...ingNew);
+</script>
+<body>
+    
+</body>
+</html>
